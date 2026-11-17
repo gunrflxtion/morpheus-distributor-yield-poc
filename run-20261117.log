@@ -1,0 +1,106 @@
+No files changed, compilation skipped
+
+Ran 3 tests for test/AaveIsolation.t.sol:AaveIsolation
+[PASS] testSupplyDirect() (gas: 511822)
+Logs:
+  supply ok, aWBTC balance 999
+
+[PASS] testViewReserveData() (gas: 16647)
+Logs:
+  normalized income 1003443629864419464694387413
+
+[PASS] testWithdrawAsDistributor() (gas: 168085)
+Logs:
+  withdraw ok, amount 10
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 3.49ms (5.55ms CPU time)
+
+Ran 3 tests for test/YieldShareVerification.t.sol:YieldShareVerification
+[PASS] testBaselineNoDirectTransfer() (gas: 2658414)
+Logs:
+  feed pinned 0xCfE54B5cD566aB89272946F602D76Ea879CAb4a8 182807000000
+  feed pinned 0xfdFD9C85aD200c506Cf9e21F1FD8dd01932FBB23 100074355
+  feed pinned 0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c 6463756118852
+  feed pinned 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419 182971456609
+  feed pinned 0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6 99979041
+  feed pinned 0x3E7d1eAB13ad0104d2750B8863b489D65364e32D 99900254
+  fork block timestamp 1794903827
+  last distribution timestamp 1794830975
+  wbtc stored price (18 dec) 64283117345850000000000
+  one-day tranche MOR (18 dec) 2856326623487917013888
+  tester multiplier (18 dec) 10000000000000000000000000
+  tester share of wBTC pool (bps) 5489
+  first distribution tranche MOR (18 dec) 5264302099392560377774
+  first distribution wBTC pool MOR (18 dec) 68904615722908263
+  first distribution wBTC pool share (bps) 0
+  claimable MOR before claim (18 dec) 2740977299815485727
+  claim call succeeded true
+  claimable MOR after claim (18 dec) 0
+  wBTC swept to L1Sender on withdraw (8 dec) 141
+  === BASELINE (no direct transfer) ===
+  claimable MOR (18 dec) 2740977299815485727
+
+[PASS] testWithDirectTransfer() (gas: 3051615)
+Logs:
+  feed pinned 0xCfE54B5cD566aB89272946F602D76Ea879CAb4a8 182807000000
+  feed pinned 0xfdFD9C85aD200c506Cf9e21F1FD8dd01932FBB23 100074355
+  feed pinned 0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c 6463756118852
+  feed pinned 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419 182971456609
+  feed pinned 0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6 99979041
+  feed pinned 0x3E7d1eAB13ad0104d2750B8863b489D65364e32D 99900254
+  fork block timestamp 1794903827
+  last distribution timestamp 1794830975
+  wbtc stored price (18 dec) 64283117345850000000000
+  one-day tranche MOR (18 dec) 2856326623487917013888
+  tester multiplier (18 dec) 10000000000000000000000000
+  tester share of wBTC pool (bps) 5489
+  direct transfer aWBTC (8 dec) 647999
+  direct transfer USD value (18 dec) 416553957569934541500
+  first distribution tranche MOR (18 dec) 5264302099392560377774
+  first distribution wBTC pool MOR (18 dec) 2415951911922410147905
+  first distribution wBTC pool share (bps) 4589
+  claimable MOR before claim (18 dec) 1329010040294111068747
+  claim call succeeded true
+  claimable MOR after claim (18 dec) 0
+  wBTC swept to L1Sender on withdraw (8 dec) 648142
+  === WITH DIRECT TRANSFER ===
+  claimable MOR (18 dec) 1329010040294111068747
+  direct transfer USD (18 dec) 416553957569934541500
+
+[PASS] testYieldBreakdown() (gas: 928182)
+Logs:
+  feed pinned 0xCfE54B5cD566aB89272946F602D76Ea879CAb4a8 182807000000
+  feed pinned 0xfdFD9C85aD200c506Cf9e21F1FD8dd01932FBB23 100074355
+  feed pinned 0xF4030086522a5bEEa4988F8cA5B36dbC97BeE88c 6463756118852
+  feed pinned 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419 182971456609
+  feed pinned 0x8fFfFfd4AfB6115b954Bd326cbe7B4BA576818f6 99979041
+  feed pinned 0x3E7d1eAB13ad0104d2750B8863b489D65364e32D 99900254
+  fork block timestamp 1794903827
+  last distribution timestamp 1794830975
+  wbtc stored price (18 dec) 64283117345850000000000
+  one-day tranche MOR (18 dec) 2856326623487917013888
+  pool yield USD (18 dec) 0x47176B2Af9885dC6C4575d4eFd63895f7Aaa4790
+  396927129367760897908
+  pool yield USD (18 dec) 0xdE283F8309Fd1AA46c95d299f6B8310716277A42
+  1285662346917000
+  pool yield USD (18 dec) 0x9380d72aBbD6e0Cc45095A2Ef8c2CA87d77Cb384
+  1432602290239611532
+  pool yield USD (18 dec) 0x6cCE082851Add4c535352f596662521B4De4750E
+  90367570880990040000
+  pool yield USD (18 dec) 0x3B51989212BEdaB926794D6bf8e9E991218cf116
+  746309223757240000
+  total yield USD over window (18 dec) 489474897425094706440
+  pool MOR delta (18 dec) 0x47176B2Af9885dC6C4575d4eFd63895f7Aaa4790
+  4278120828358484193304
+  pool MOR delta (18 dec) 0xdE283F8309Fd1AA46c95d299f6B8310716277A42
+  13781067449241820
+  pool MOR delta (18 dec) 0x9380d72aBbD6e0Cc45095A2Ef8c2CA87d77Cb384
+  15529488590936796905
+  pool MOR delta (18 dec) 0x6cCE082851Add4c535352f596662521B4De4750E
+  962690639636145742727
+  pool MOR delta (18 dec) 0x3B51989212BEdaB926794D6bf8e9E991218cf116
+  7947361739544403019
+
+Suite result: ok. 3 passed; 0 failed; 0 skipped; finished in 17.48ms (31.11ms CPU time)
+
+Ran 2 test suites in 23.45ms (20.96ms CPU time): 6 tests passed, 0 failed, 0 skipped (6 total tests)
